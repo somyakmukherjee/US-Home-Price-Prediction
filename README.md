@@ -11,7 +11,7 @@ Welcome to the "US Home Price Prediction & Trends Analysis" project repository! 
 5. Version Control: Git, GitHub
 6. Colab Notebooks for data exploration and analysis
 
-## Data Collection Sources
+## Data Collection Sources:
 
 1. Target (S&P/Case-Shiller U.S. National Home Price Index.) https://fred.stlouisfed.org/series/CSUSHPINSA
 2. Population (Population includes resident population plus armed forces overseas.  The monthly estimate is the average of estimates for the first of the month and the first of the following month.) https://fred.stlouisfed.org/series/POPTHM
