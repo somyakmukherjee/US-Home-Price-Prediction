@@ -1,5 +1,8 @@
 # US-Home-Price-Prediction
 
+![home-prices-are-rising-in-literally-every-major-housing-market-1200-x-630](https://github.com/somyakmukherjee/US-Home-Price-Prediction/assets/110627955/9096e2bc-ff8d-4ac0-90d6-2a5690510de7)
+
+
 Welcome to the "US Home Price Prediction & Trends Analysis" project repository! In this project, we embark on a data-driven journey to understand the key factors influencing home prices in the United States of America over the past twenty years. Our goal is to build a comprehensive model that sheds light on the intricate relationships between various factors and home prices by leveraging publicly available data and advanced data science techniques. 
 
 ## **Project Scope:**
