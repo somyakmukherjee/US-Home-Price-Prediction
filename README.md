@@ -70,7 +70,7 @@ https://fred.stlouisfed.org/series/UNDCONTSA
 In our analysis, we identified several key features and their correlations with the target variable, represented by the S&P Case-Shiller Home Price Index.
 
 | Feature                | Correlation with Home Price Index |
-|------------------------|----------------------------- -----|
+|------------------------|-----------------------------------|
 | MSPUS                  | 0.976881                          |
 | PPI_Cement             | 0.955342                          |
 | GDP                    | 0.952614                          |
