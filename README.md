@@ -64,3 +64,73 @@ https://fred.stlouisfed.org/series/PSAVERT
 19. New Privately-Owned Housing Units Completed: (Total units in thousands) https://fred.stlouisfed.org/series/COMPUTSA
 20. New Privately-Owned Housing Units Under Construction: (Total Units in thousands) 
 https://fred.stlouisfed.org/series/UNDCONTSA
+
+## Feature Selection
+
+In our analysis, we identified several key features and their correlations with the target variable, represented by the S&P Case-Shiller Home Price Index.
+
+| Feature                | Correlation with Home Price Index |
+|------------------------|----------------------------- -----|
+| MSPUS                  | 0.976881                          |
+| PPI_Cement             | 0.955342                          |
+| GDP                    | 0.952614                          |
+| income                 | 0.946638                          |
+| PPI_Concrete           | 0.929656                          |
+| population             | 0.895138                          |
+| total_emp_cons         | 0.779245                          |
+| new_private_hw_under   | 0.662241                          |
+| all_Const_Emp          | 0.569529                          |
+| home_ow_rate           | 0.112943                          |
+| monthly_supply         | 0.213615                          |
+| permit                 | 0.162787                          |
+| house_st               | 0.038691                          |
+| new_private_house      | -0.019483                         |
+| unemployed_rate        | -0.230195                         |
+| IPI_Cement             | -0.242221                         |  
+| p_saving_rate          | -0.237831                         |
+| emp_pop_ratio          | -0.546168                         |
+| mortgage_rate          | -0.730709                         |
+| labor_percent          | -0.798830                         |
+
+The positive correlation values indicate a direct relationship with home prices, while negative values suggest an inverse relationship. Features with higher absolute correlation values have a larger impact on home prices.
+
+## **Model Training**
+
+LASSO regression, also known as L1 regularization, is a popular technique used in statistical modeling and machine learning to estimate the relationships between variables and make predictions. LASSO stands for Least Absolute Shrinkage and Selection Operator.
+
+The primary goal of LASSO regression is to find a balance between model simplicity and accuracy. It uses L1 regularization technique,  it is used when we have more features(like our problem) because it automatically performs feature selection.
+
+LASSO regression model uses shrinkage. Shrinkage is where data values are shrunk towards a central point as the mean. The lasso procedure encourages simple, sparse models (i.e. we have a large set of variables, but only a small number of them are truly important). This particular type of regression is well-suited for models showing high levels of multicollinearity or when you want to automate certain parts of model selection, like variable selection/parameter elimination.
+
+The main advantage of a LASSO regression model is that it has the ability to set the coefficients for features it does not consider interesting to zero. This means that the model does some automatic feature selection to decide which features should and should not be included on its own. This is why we choose LASSO regression for our model training.
+
+## **Data splitting and Scaling**
+
+In this project, we employed the **Lasso regression** model due to indications of significant collinearity in the dataset. The Lasso regression model is known for its ability to handle collinearity by applying L1 regularization, which encourages sparsity in feature coefficients.
+
+Optimal Alpha: 0.0100
+Mean Squared Error (MSE): 21.25
+RMSE: 4.609395
+R-squared (R2): 0.99
+
+Cross-Validation R-squared Scores: 
+ [0.99540962 0.9930768  0.99603814 0.99374723 0.99470933 0.99493974
+ 0.99630378 0.99449389]
+
+Mean R-squared: 0.9948
+Standard Deviation of R-squared: 0.0010
+
+## **Most Prominent features and least prominent features**
+
+Lasso Regression is unique in that it not only regularizes the model but can also be used for feature selection. As it adds an L1 penalty term, it tends to drive the coefficients of some features to zero. This means that some features are effectively ignored in the final model, which simplifies it and reduces the risk of overfitting.
+
+These coefficients represent the impact of each feature on the prediction of home prices. Positive coefficients indicate a direct relationship with home prices, while negative coefficients suggest an inverse relationship & zero coefficients indicates that they do not significantly impact the prediction of home prices. Here we can see PPI_cement have zero coefficient.
+
+## **Conclusion:**
+
+1. The points cluster closely around the diagonal reference line (the red dashed line), it suggests that the model's predictions closely match the observed values. This alignment indicates good performance.
+2. The scatter plot shows a clear, linear relationship along the diagonal line, it indicates that the model captures the underlying patterns in the data well.
+3. In data processing phase, deviations, outliers, or systematic patterns was carefully examined to understand areas for improvement in the model.
+3. Mean R-squared is 0.9948 & Standard Deviation of R-squared is 0.0010.
+
+
