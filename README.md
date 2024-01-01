@@ -2,6 +2,31 @@
 
 Welcome to the "US Home Price Prediction & Trends Analysis" project repository! In this project, we embark on a data-driven journey to understand the key factors influencing home prices in the United States of America over the past twenty years. Our goal is to build a comprehensive model that sheds light on the intricate relationships between various factors and home prices by leveraging publicly available data and advanced data science techniques. 
 
+## **Project Scope:**
+This project aims to build a data science model to predict U.S. home prices based on key economic factors over the last 20 years.
+
+### **Steps**
+1.Data Collection and Preparation:
+
+*   Gather historical data for the specified features.
+*   Clean and preprocess the data for analysis.
+
+2. Exploratory Data Analysis (EDA):
+
+*   Visualize relationships between features and CSUSHPISA.
+*   Identify correlations and patterns.
+
+3. Model Development:
+
+*  Build predictive models using regression or machine learning algorithms.
+*  Train and validate the models.
+
+4. Model Evaluation:
+
+
+*   Evaluate model performance using appropriate metrics.
+*   Fine-tune models for better accuracy.
+
 ## Libraries and Tools used:
 
 1. Programming Languages: Python
